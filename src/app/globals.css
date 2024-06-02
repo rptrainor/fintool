@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-tree {
+  @apply bg-cover bg-center relative;
+  background-image: url("/tree.jpg");
+}
+
+.bg-gradient-overlay {
+  @apply bg-gradient-to-t from-black/20 from-70% to-transparent absolute inset-0 z-0;
+}

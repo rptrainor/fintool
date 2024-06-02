@@ -21,16 +21,11 @@ const config: Config = {
         'brand_yellow_dark': '#723B13',
         'brand_blue_light': '#E2EFFE',
         'brand_blue_dark': '#1E429F',
-        'text_primary': '#111827',
-        'text_secondary': '#6B7280',
+        'text_primary': '#000A4F',
+        'text_secondary': '#5E5E5E',
         'background_primary': '#F6F5F2',
         'background_secondary': '#DEE4F2',
         'background_dark': '#0037B9',
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

@@ -12,8 +12,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="bg-background_primary h-full w-screen">
+      <body className="min-h-screen text-lg text-white bg-tree relative">
+        <div className="bg-gradient-overlay"></div>
+        <div className="relative z-10">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
