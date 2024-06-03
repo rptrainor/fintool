@@ -1,8 +1,8 @@
 import { QueryForm } from "~/components/QueryForm"
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-1 pt-12 px-4">
-      <div className="w-full max-w-lg">
+    <main className="flex flex-col items-center pt-8 md:pt-12 lg:pt-16 px-4">
+      <div className="w-full max-w-2xl">
         <QueryForm />
       </div>
     </main>

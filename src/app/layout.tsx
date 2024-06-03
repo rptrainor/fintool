@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google"
 
 import { cn } from "~/lib/utils"
+import { SideSheet } from "~/components/SideSheet"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -27,7 +28,8 @@ export default function RootLayout({
         fontSans.variable
       )}>
         <div className="bg-gradient-overlay">
-          <div className="relative z-10">
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <SideSheet />
             {children}
           </div>
         </div>
