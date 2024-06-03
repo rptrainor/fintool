@@ -1,4 +1,13 @@
 import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google"
+
+import { cn } from "~/lib/utils"
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,10 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background_primary h-full w-screen">
-      <body className="min-h-screen text-lg text-white bg-tree relative">
-        <div className="bg-gradient-overlay"></div>
-        <div className="relative z-10">
-          {children}
+      <body className={cn(
+        "min-h-screen font-sans antialiased text-lg bg-tree relative",
+        fontSans.variable
+      )}>
+        <div className="bg-gradient-overlay">
+          <div className="relative z-10">
+            {children}
+          </div>
         </div>
       </body>
     </html>

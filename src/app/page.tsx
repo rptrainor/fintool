@@ -1,8 +1,11 @@
+import { CommandDemo } from "~/components/CommandDemo"
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center gap-1">
-      <p className="text-4xl font-bold">Header</p>
-      <p className="text-xl text-white/80">subheader</p>
+    <main className="flex flex-col items-center gap-1 pt-12 px-4">
+      <div className="w-full max-w-xs">
+        <CommandDemo />
+      </div>
     </main>
   );
 }
