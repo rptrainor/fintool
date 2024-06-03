@@ -50,7 +50,6 @@ export function QueryForm() {
             <FormItem className="bg-white rounded-t-md rounded-b-none">
               <FormControl>
                 <Textarea
-                  autoFocus
                   placeholder="Ask about a company's filings&#8230;"
                   className="resize-none focus-visible:outline-none focus-visible:ring-0"
                   {...field}
