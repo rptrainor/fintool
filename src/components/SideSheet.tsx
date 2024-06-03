@@ -24,7 +24,7 @@ export function SideSheet() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size='icon' variant="secondary" className="ml-4 mt-4 bg-secondary/10 hover:bg-primary-foreground/20 transition-opacity">
+        <Button size='icon' variant="secondary" className="bg-secondary/10 hover:bg-primary-foreground/20 transition-opacity">
           <Bars3BottomLeftIcon className="h-6 w-6 text-white" />
         </Button>
       </SheetTrigger>
