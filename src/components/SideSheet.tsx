@@ -61,12 +61,12 @@ export function SideSheet() {
 
         </ScrollArea>
         <SheetFooter>
-          <div className="flex items-center justify-start w-full gap-4">
+          <div className="flex items-center justify-start w-full gap-2">
             <Avatar>
-              <AvatarImage src="https://avatars.githubusercontent.com/u/45347058" alt="Edouard Brillant" />
-              <AvatarFallback>EB</AvatarFallback>
+              <AvatarImage src="https://avatars.githubusercontent.com/u/1024025" alt="Arthur Dent" />
+              <AvatarFallback>AD</AvatarFallback>
             </Avatar>
-            <p className="font-bold text-muted-foreground text-sm">rp@feynman.com</p>
+            <p className="font-bold text-muted-foreground text-sm">arthur@apdent.com</p>
           </div>
         </SheetFooter>
       </SheetContent>
