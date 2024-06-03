@@ -39,10 +39,10 @@ export function QueryForm() {
       ),
     })
   }
-  // flex min-h-[60px] w-full rounded-md border border-input px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none border-none outline-none ring-0 bg-transparent ring-none focus:ring-none focus:ring-offset-none
+
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
         <FormField
           control={form.control}
           name="query"
@@ -70,7 +70,7 @@ export function QueryForm() {
                 </div>
               </TooltipTrigger>
               <TooltipContent>
-                <span>companies</span>
+                <span>Companies</span>
               </TooltipContent>
             </Tooltip>
             <Tooltip>
@@ -82,7 +82,7 @@ export function QueryForm() {
                 </div>
               </TooltipTrigger>
               <TooltipContent>
-                <p>documents</p>
+                <p>Documents</p>
               </TooltipContent>
             </Tooltip>
             <Tooltip>
@@ -94,7 +94,7 @@ export function QueryForm() {
                 </div>
               </TooltipTrigger>
               <TooltipContent>
-                <p>suggestions</p>
+                <p>Suggested Questions</p>
               </TooltipContent>
             </Tooltip>
 

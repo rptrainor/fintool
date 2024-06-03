@@ -8,7 +8,7 @@
 }
 
 .bg-gradient-overlay {
-  @apply bg-gradient-to-t from-black/20 from-70% to-transparent absolute inset-0 z-0;
+  @apply bg-gradient-to-t from-black/45 from-80% to-transparent absolute inset-0 z-0;
 }
 
 @layer base {
