@@ -27,28 +27,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-background_primary h-full w-full">
+    <html lang="en" className="bg-background_primary h-full w-screen">
       <body className={cn(
-        "font-sans antialiased text-lg bg-tree relative h-screen w-screen overflow-hidden",
+        "min-h-screen font-sans antialiased text-lg bg-tree relative",
         fontSans.variable
       )}>
         <div className="bg-gradient-overlay">
           <div className="relative z-10 max-w-2xl mx-auto">
             <div className="flex w-full justify-between items-center p-4">
               <SideSheet />
-              <div className="flex items-center gap-4">
+              <div className="flex items-center sm:gap-4 gap-2">
 
                 <Button variant="secondary" size='sm'>
                   <ChatBubbleLeftRightIcon className="h-4 w-4" />
                   <AlertTitle className="hidden sm:block">Chat with</AlertTitle>
-                  <AlertTitle className="">support</AlertTitle>
+                  <AlertTitle className="">Support</AlertTitle>
 
                 </Button>
 
                 <Button size='sm'>
                   <AlertTitle>&#50; </AlertTitle>
-                  <AlertTitle className="hidden sm:block">Free questions</AlertTitle>
-                  <AlertTitle>left</AlertTitle>
+                  <AlertTitle className="hidden sm:block">Free Questions</AlertTitle>
+                  <AlertTitle>Left</AlertTitle>
                 </Button>
 
               </div>

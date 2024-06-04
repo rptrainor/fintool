@@ -16,9 +16,9 @@ export function SuggestedQueries() {
       className="w-full sm:max-w-2xl bg-transparent"
     >
       <div className="font-medium text-white/80">Conversation Starters</div>
-      <CarouselContent className="-ml-1 flex flex-col gap-2 p-2 sm:flex-row">
+      <CarouselContent className="-ml-1 flex flex-col gap-2 sm:px-3 sm:flex-row">
         {SUGGESTIONS.map((suggestion) => (
-          <Button variant="ghost" key={suggestion.text} className="pl-1 w-full basis-1/3 bg-transparent block whitespace-pre-wrap text-left h-auto rounded-md hover:bg-transparent">
+          <Button variant="ghost" key={suggestion.text} className="sm:pl-1 sm:py-2 pt-2 w-full basis-1/3 bg-transparent block whitespace-pre-wrap text-left h-auto rounded-md hover:bg-transparent">
             <Card className="flex h-full border-none px-2 py-1 bg-secondary/10 hover:bg-primary-foreground/20 rounded-md cursor-pointer">
               <p className="text-base text-ellipsis text-truncate text-white font-medium">{suggestion.text}</p>
             </Card>
