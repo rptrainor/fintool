@@ -67,7 +67,7 @@ export function SideSheet() {
               <AvatarImage src="https://avatars.githubusercontent.com/u/1024025" alt="Arthur Dent" />
               <AvatarFallback>AD</AvatarFallback>
             </Avatar>
-            <p className="font-bold text-muted-foreground text-sm">arthur@apdent.com</p>
+            <p className="font-bold text-muted-foreground text-sm text-ellipsis truncate">arthur@apdent.com</p>
           </div>
         </SheetFooter>
       </SheetContent>
