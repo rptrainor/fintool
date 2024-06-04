@@ -24,6 +24,19 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
+  openGraph: {
+    title: "Fintool: ChatGPT + EDGAR",
+    description: "FintoolGPT: Harnessing ChatGPT & EDGAR for powerful AI analysis. Dive into SEC filings, earnings transcripts, and financial news. Top-tier chat-based insights from industry-leading data sources.",
+    url: "https://fintool.app",
+    images: [
+      {
+        url: "https://fintoolpublic.s3.amazonaws.com/fintoolchat.png",
+        width: 1200,
+        height: 630,
+        alt: "Fintool: ChatGPT + EDGAR",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
