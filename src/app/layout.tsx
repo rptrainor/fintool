@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google"
+import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
 
 import { cn } from "~/lib/utils"
 import { SideSheet } from "~/components/SideSheet"
 import { QueryCounter } from "~/components/QueryCounter"
+import { Button } from "~/components/ui/button"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -11,6 +13,9 @@ const fontSans = FontSans({
 })
 
 import "./globals.css";
+import {
+  AlertTitle,
+} from "~/components/ui/alert"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,10 +36,31 @@ export default function RootLayout({
         <div className="bg-gradient-overlay">
           <div className="relative z-10 max-w-2xl mx-auto">
             <div className="flex w-full justify-between items-center p-4">
-            <SideSheet />
-            <QueryCounter />
+              <SideSheet />
+              <div className="flex items-center gap-4">
+
+                <Button variant="secondary" size='sm'>
+                  <ChatBubbleLeftRightIcon className="h-4 w-4" />
+                  <AlertTitle className="hidden sm:block">Chat with</AlertTitle>
+                  <AlertTitle className="">support</AlertTitle>
+
+                </Button>
+
+                <Button size='sm'>
+                  <AlertTitle>&#50; </AlertTitle>
+                  <AlertTitle className="hidden sm:block">Free questions</AlertTitle>
+                  <AlertTitle>left</AlertTitle>
+
+                </Button>
+
+              </div>
             </div>
             {children}
+            <div className="bottom-4 left-4 fixed max-w-7xl mx-auto">
+              <Button variant={"secondary"} className="rounded-full px-1.5 py-1.5 h-12 w-12">
+                <ChatBubbleLeftRightIcon className="h-6 w-6" />
+              </Button>
+            </div>
           </div>
         </div>
       </body>

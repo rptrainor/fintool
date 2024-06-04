@@ -86,7 +86,7 @@ export function QueryForm() {
             </Tooltip>
             <Tooltip>
               <TooltipTrigger>
-                <div className="text-muted-foreground flex no-wrap gap-x-1 items-center">
+              <div className="text-muted-foreground flex no-wrap gap-x-1 items-center">
                   <kbd className="pointer-events-none px-1 py-1 h-7 w-7 flex justify-center items-center select-none gap-1 rounded border bg-muted font-mono font-medium text-muted-foreground opacity-100 text-base">
                     &#47;
                   </kbd>
@@ -98,7 +98,7 @@ export function QueryForm() {
             </Tooltip>
 
             <div className="grow" />
-            <Button className="rounded-full px-1 py-1 h-7 w-7 flex justify-center items-center" type="submit">
+            <Button className="px-1 py-1 h-7 w-7 flex justify-center items-center" type="submit">
               <PaperAirplaneIcon className="h-4 w-4" />
             </Button>
           </div>
