@@ -54,7 +54,7 @@ export default function RootLayout({
               </div>
             </div>
             {children}
-            <div className="bottom-4 fixed max-w-2xl mx-auto">
+            <div className="bottom-4 fixed max-w-2xl mx-auto pl-4">
               <Button variant={"secondary"} className="rounded-full px-1.5 py-1.5 h-12 w-12">
                 <ChatBubbleLeftRightIcon className="h-6 w-6" />
               </Button>
