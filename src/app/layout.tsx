@@ -4,7 +4,6 @@ import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
 
 import { cn } from "~/lib/utils"
 import { SideSheet } from "~/components/SideSheet"
-import { QueryCounter } from "~/components/QueryCounter"
 import { Button } from "~/components/ui/button"
 
 const fontSans = FontSans({
@@ -50,7 +49,6 @@ export default function RootLayout({
                   <AlertTitle>&#50; </AlertTitle>
                   <AlertTitle className="hidden sm:block">Free questions</AlertTitle>
                   <AlertTitle>left</AlertTitle>
-
                 </Button>
 
               </div>
