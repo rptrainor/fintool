@@ -17,7 +17,7 @@ import {
 } from "~/components/ui/alert"
 
 export const metadata: Metadata = {
-  title: "Fintool: ChatGPT + EDGAR",
+  title: "Fintool",
   description: "FintoolGPT: Harnessing ChatGPT & EDGAR for powerful AI analysis. Dive into SEC filings, earnings transcripts, and financial news. Top-tier chat-based insights from industry-leading data sources.",
   icons: {
     icon: "/favicon.ico",
