@@ -8,6 +8,7 @@ import {
   CarouselContent,
 } from "~/components/ui/carousel"
 import { Button } from "~/components/ui/button"
+import { SUGGESTIONS } from "~/constants/suggestions"
 
 export function SuggestedQueries() {
 
@@ -28,15 +29,3 @@ export function SuggestedQueries() {
     </Carousel>
   )
 }
-
-const SUGGESTIONS = [
-  {
-    text: "$TSLA - How has net income changed over the past four quarters?"
-  },
-  {
-    text: "$WFC - Market share growth strategy for Wells in IB?"
-  },
-  {
-    text: "/aapl vision pro"
-  }
-]

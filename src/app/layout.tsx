@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background_primary h-full w-screen">
       <body className={cn(
-        "min-h-screen font-sans antialiased text-lg bg-tree relative",
+        "min-h-screen font-sans antialiased text-lg relative overflow-scroll bg-tree",
         fontSans.variable
       )}>
         <div className="bg-gradient-overlay">
@@ -55,8 +55,8 @@ export default function RootLayout({
             </div>
             {children}
             <div className="bottom-4 fixed max-w-2xl mx-auto pl-4">
-              <Button variant={"secondary"} className="rounded-full px-1.5 py-1.5 h-12 w-12">
-                <ChatBubbleLeftRightIcon className="h-6 w-6" />
+              <Button variant={"secondary"} className="rounded-full sm:px-1.5 sm:py-1.5 sm:h-12 sm:w-12 px-1 py-1 h-10 w-10">
+                <ChatBubbleLeftRightIcon className="sm:h-6 sm:w-6 h-4 w-4" />
               </Button>
             </div>
           </div>
