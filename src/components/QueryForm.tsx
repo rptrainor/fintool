@@ -62,7 +62,7 @@ export function QueryForm() {
           <div className="flex flex-wrap gap-x-2 gap-y-1 items-center bg-gray-50 px-4 py-2.5 text-xs text-gray-700 rounded-t-none rounded-b-md">
             <Tooltip>
               <TooltipTrigger>
-                <div className="text-muted-foreground flex no-wrap gap-x-1 items-center">
+                <div className="text-muted-foreground flex no-wrap gap-x-1 items-center hover:scale-110 transition-all duration-200">
                   <kbd className="pointer-events-none px-1 py-1 h-7 w-7 flex justify-center items-center select-none gap-1 rounded border bg-muted font-mono font-medium text-muted-foreground opacity-100 text-base">
                     &#36;
                   </kbd>
@@ -74,7 +74,7 @@ export function QueryForm() {
             </Tooltip>
             <Tooltip>
               <TooltipTrigger>
-                <div className="text-muted-foreground flex no-wrap gap-x-1 items-center">
+                <div className="text-muted-foreground flex no-wrap gap-x-1 items-center hover:scale-110 transition-all duration-200">
                   <kbd className="pointer-events-none px-1 py-1 h-7 w-7 flex justify-center items-center select-none gap-1 rounded border bg-muted font-mono font-medium text-muted-foreground opacity-100 text-base">
                     &#64;
                   </kbd>
@@ -85,8 +85,8 @@ export function QueryForm() {
               </TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger>
-              <div className="text-muted-foreground flex no-wrap gap-x-1 items-center">
+              <TooltipTrigger onClick={() => console.log('clicke')}>
+                <div className="text-muted-foreground flex no-wrap gap-x-1 items-center hover:scale-110 transition-all duration-200">
                   <kbd className="pointer-events-none px-1 py-1 h-7 w-7 flex justify-center items-center select-none gap-1 rounded border bg-muted font-mono font-medium text-muted-foreground opacity-100 text-base">
                     &#47;
                   </kbd>

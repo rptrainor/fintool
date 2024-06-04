@@ -15,7 +15,7 @@ export function SuggestedQueries() {
     <Carousel
       className="w-full sm:max-w-2xl bg-transparent"
     >
-      <div className="font-medium mb-1 text-white/80">Conversation Starters</div>
+      <div className="font-medium text-white/80">Conversation Starters</div>
       <CarouselContent className="-ml-1 flex flex-col gap-2 p-2 sm:flex-row">
         {SUGGESTIONS.map((suggestion) => (
           <Button variant="ghost" key={suggestion.text} className="pl-1 w-full basis-1/3 bg-transparent block whitespace-pre-wrap text-left h-auto rounded-md hover:bg-transparent">
