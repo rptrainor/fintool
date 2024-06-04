@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 
 import { Button } from "~/components/ui/button"
 import {
@@ -17,8 +18,15 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "~/components/ui/tooltip"
+import {
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogTitle,
+} from "~/components/ui/dialog"
 import { Textarea } from "~/components/ui/textarea"
 import { toast } from "~/components/ui/use-toast"
+import { Modal } from "~/components/Modal"
 
 const FormSchema = z.object({
   query: z.string()
@@ -28,6 +36,10 @@ export function QueryForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   })
+
+  const [isCompanyModalOpen, setIsCompanyModalOpen] = useState(false)
+  const [isDocumentModalOpen, setIsDocumentModalOpen] = useState(false)
+  const [isQuestionModalOpen, setIsQuestionModalOpen] = useState(false)
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
@@ -61,7 +73,7 @@ export function QueryForm() {
         <TooltipProvider>
           <div className="flex flex-wrap gap-x-2 gap-y-1 items-center bg-gray-50 px-4 py-2.5 text-xs text-gray-700 rounded-t-none rounded-b-md">
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger onClick={() => setIsCompanyModalOpen(true)}>
                 <div className="text-muted-foreground flex no-wrap gap-x-1 items-center hover:scale-110 transition-all duration-200">
                   <kbd className="pointer-events-none px-1 py-1 h-7 w-7 flex justify-center items-center select-none gap-1 rounded border bg-muted font-mono font-medium text-muted-foreground opacity-100 text-base">
                     &#36;
@@ -73,7 +85,7 @@ export function QueryForm() {
               </TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger onClick={() => setIsDocumentModalOpen(true)}>
                 <div className="text-muted-foreground flex no-wrap gap-x-1 items-center hover:scale-110 transition-all duration-200">
                   <kbd className="pointer-events-none px-1 py-1 h-7 w-7 flex justify-center items-center select-none gap-1 rounded border bg-muted font-mono font-medium text-muted-foreground opacity-100 text-base">
                     &#64;
@@ -85,7 +97,7 @@ export function QueryForm() {
               </TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger onClick={() => console.log('clicke')}>
+              <TooltipTrigger onClick={() => setIsQuestionModalOpen(true)}>
                 <div className="text-muted-foreground flex no-wrap gap-x-1 items-center hover:scale-110 transition-all duration-200">
                   <kbd className="pointer-events-none px-1 py-1 h-7 w-7 flex justify-center items-center select-none gap-1 rounded border bg-muted font-mono font-medium text-muted-foreground opacity-100 text-base">
                     &#47;
@@ -104,6 +116,19 @@ export function QueryForm() {
           </div>
         </TooltipProvider>
       </form>
+
+      <Modal isOpen={isCompanyModalOpen} onClose={() => setIsCompanyModalOpen(false)}>
+        <DialogTitle>Company</DialogTitle>
+      </Modal>
+
+      <Modal isOpen={isDocumentModalOpen} onClose={() => setIsDocumentModalOpen(false)}>
+        <DialogTitle>Company</DialogTitle>
+
+      </Modal>
+
+      <Modal isOpen={isQuestionModalOpen} onClose={() => setIsQuestionModalOpen(false)}>
+        <DialogTitle>Company</DialogTitle>
+      </Modal>
     </Form>
   )
 }
